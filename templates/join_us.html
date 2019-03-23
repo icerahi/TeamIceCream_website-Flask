@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Team|IceCream Join</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{{url_for('static',filename='fonts/material-icon/css/material-design-iconic-font.min.css')}}">
+
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+
+    <div class="main">
+      <h1><a href="{{url_for('home')}}"> Back to Home </a></h1>
+
+        <div class="container">
+            <form action="" method="POST" class="appointment-form" id="appointment-form">
+                <h2>Are you want join "Team | IceCream"</h2>
+                <div class="form-group-1">
+
+                    <input type="text" name="name" id="name" placeholder="Your Name" required />
+                    <input type="text" name="institute" id="institute" placeholder="Your institute" required />
+                      <input type="text" name="study" id="study" placeholder="Study in (Class/Semester) with includes Department" required />
+                    <input type="text" name="birth" id="birth" placeholder="Birth" required />
+                    <div class="select-list">
+                        <select name="gender" id="gender">
+                            <option slected value="">Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <input type="email" name="email" id="email" placeholder="Email" required />
+                    <input type="number" name="phone_number" id="phone_number" placeholder="Phone number" required />
+
+                    <input type="text" name="skills" id="skills" placeholder="Your Skills" required />
+
+                    <div class="select-list">
+                        <select name="interest" id="interest">
+                            <option slected value="">Interested Technology</option>
+                            <option value="Graphics">Graphics Design & UI/UX</option>
+                            <option value="Android">Android apps development</option>
+                            <option value="web_front">Web FrontEnd Development</option>
+                            <option value="web_backend">web_backend Development</option>
+                            <option value="data_science">Data Sceince</option>
+                            <option value="Machine_learning">Machine_learning</option>
+                            <option value="IOT">IOT Development</option>
+                        </select>
+                    </div>
+                    <div class="select-list">
+                        <select name="experience" id="experience">
+                            <option slected value="">Have you work Experience in?</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="python">Python</option>
+                            <option value="java">Java</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                      <input type="text" name="why_work" id="why_work" placeholder="Why are you want to Join with 'Team IceCream'" required />
+
+                </div>
+
+                <div class="form-check">
+                    <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                    <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree to the  <a href="#" class="term-service">Terms and Conditions</a></label>
+                </div>
+                <div class="form-submit">
+                    <input type="submit" name="submit" id="submit" class="submit" value="Request for Join" />
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="{{url_for('static',filename='vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/main.js')}}"></script>
+
+</body>
+</html>
